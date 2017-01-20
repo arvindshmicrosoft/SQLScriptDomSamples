@@ -1,0 +1,6 @@
+        public override void ExplicitVisit(ExecuteStatement node)
+        {
+            Console.WriteLine((node.ExecuteSpecification.ExecutableEntity as ExecutableProcedureReference).ProcedureReference.ProcedureReference.Name.BaseIdentifier.Value);
+
+            base.ExplicitVisit(node);
+        }

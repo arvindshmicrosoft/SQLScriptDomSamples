@@ -3,3 +3,10 @@
 ################################################################################
 
 *.suo
+/1_BasicUsage/bin/Debug
+/1_BasicUsage/obj/x86/Debug
+/2_VisitorPattern/obj/x86/Debug
+/3_ScriptTokens/obj/x86/Debug
+/4_TSQLValidation/obj/x86/Debug
+/5_TSQLFormatter/obj/x86/Debug
+/6_TSQLVisualizer/obj/x86/Debug

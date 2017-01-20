@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_BasicUsage", "1_BasicUsage\1_BasicUsage.csproj", "{88301D6F-7C0B-4950-891D-999F991133A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_VisitorPattern", "2_VisitorPattern\2_VisitorPattern.csproj", "{46DADD69-CF9A-410D-805C-A24A8000327C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_ScriptTokens", "3_ScriptTokens\3_ScriptTokens.csproj", "{3C51886E-96B8-4037-8D69-DED60EE1D557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_TSQLValidation", "4_TSQLValidation\4_TSQLValidation.csproj", "{34808131-3AA3-4D50-A2C0-B47F93651A6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_TSQLFormatter", "5_TSQLFormatter\5_TSQLFormatter.csproj", "{D45AB243-99C3-4DD0-B692-835D3BF4E0C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_TSQLVisualizer", "6_TSQLVisualizer\6_TSQLVisualizer.csproj", "{51E8719C-0ACA-4C79-AE31-7DE0DC0D5BE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88301D6F-7C0B-4950-891D-999F991133A6}.Debug|x86.ActiveCfg = Debug|x86
+		{88301D6F-7C0B-4950-891D-999F991133A6}.Debug|x86.Build.0 = Debug|x86
+		{88301D6F-7C0B-4950-891D-999F991133A6}.Release|x86.ActiveCfg = Release|x86
+		{88301D6F-7C0B-4950-891D-999F991133A6}.Release|x86.Build.0 = Release|x86
+		{46DADD69-CF9A-410D-805C-A24A8000327C}.Debug|x86.ActiveCfg = Debug|x86
+		{46DADD69-CF9A-410D-805C-A24A8000327C}.Debug|x86.Build.0 = Debug|x86
+		{46DADD69-CF9A-410D-805C-A24A8000327C}.Release|x86.ActiveCfg = Release|x86
+		{46DADD69-CF9A-410D-805C-A24A8000327C}.Release|x86.Build.0 = Release|x86
+		{3C51886E-96B8-4037-8D69-DED60EE1D557}.Debug|x86.ActiveCfg = Debug|x86
+		{3C51886E-96B8-4037-8D69-DED60EE1D557}.Debug|x86.Build.0 = Debug|x86
+		{3C51886E-96B8-4037-8D69-DED60EE1D557}.Release|x86.ActiveCfg = Release|x86
+		{3C51886E-96B8-4037-8D69-DED60EE1D557}.Release|x86.Build.0 = Release|x86
+		{34808131-3AA3-4D50-A2C0-B47F93651A6E}.Debug|x86.ActiveCfg = Debug|x86
+		{34808131-3AA3-4D50-A2C0-B47F93651A6E}.Debug|x86.Build.0 = Debug|x86
+		{34808131-3AA3-4D50-A2C0-B47F93651A6E}.Release|x86.ActiveCfg = Release|x86
+		{34808131-3AA3-4D50-A2C0-B47F93651A6E}.Release|x86.Build.0 = Release|x86
+		{D45AB243-99C3-4DD0-B692-835D3BF4E0C0}.Debug|x86.ActiveCfg = Debug|x86
+		{D45AB243-99C3-4DD0-B692-835D3BF4E0C0}.Debug|x86.Build.0 = Debug|x86
+		{D45AB243-99C3-4DD0-B692-835D3BF4E0C0}.Release|x86.ActiveCfg = Release|x86
+		{D45AB243-99C3-4DD0-B692-835D3BF4E0C0}.Release|x86.Build.0 = Release|x86
+		{51E8719C-0ACA-4C79-AE31-7DE0DC0D5BE7}.Debug|x86.ActiveCfg = Debug|x86
+		{51E8719C-0ACA-4C79-AE31-7DE0DC0D5BE7}.Debug|x86.Build.0 = Debug|x86
+		{51E8719C-0ACA-4C79-AE31-7DE0DC0D5BE7}.Release|x86.ActiveCfg = Release|x86
+		{51E8719C-0ACA-4C79-AE31-7DE0DC0D5BE7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
