@@ -1,5 +1,0 @@
-            Sql110ScriptGenerator scrGen = new Sql110ScriptGenerator();
-            string formattedSQL = null;
-            scrGen.GenerateScript(tree, out formattedSQL);
-
-            textBox2.Text = formattedSQL;
