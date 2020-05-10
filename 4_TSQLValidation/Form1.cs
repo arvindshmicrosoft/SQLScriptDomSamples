@@ -1,8 +1,7 @@
 ﻿//------------------------------------------------------------------------------
-//<copyright company="Microsoft">
 //    The MIT License (MIT)
 //    
-//    Copyright (c) 2017 Microsoft
+//    Copyright (c) 2020 Arvind Shyamsundar
 //    
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -28,19 +27,13 @@
 //    be liable for any damages whatsoever (including, without limitation, damages for loss of business profits,
 //    business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability
 //    to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
-//</copyright>
 //------------------------------------------------------------------------------
 
+using Microsoft.SqlServer.TransactSql.ScriptDom;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
-using Microsoft.SqlServer.TransactSql.ScriptDom;
+using System.Windows.Forms;
 
 namespace TSQLFormatter
 {
@@ -53,30 +46,29 @@ namespace TSQLFormatter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TextReader rdr = new StringReader(textBox1.Text);
-
-            IList<ParseError> errors = null;
-            TSql110Parser parser = new TSql110Parser(true);
-            TSqlFragment tree = parser.Parse(rdr, out errors);
-
-            foreach (ParseError err in errors)
+            using (var rdr = new StringReader(textBox1.Text))
             {
-                Console.WriteLine(err.Message);
-            }
+                IList<ParseError> errors = null;
+                var parser = new TSql150Parser(true, SqlEngineType.All);
+                var tree = parser.Parse(rdr, out errors);
 
-            MyVisitor checker = new MyVisitor();
+                foreach (ParseError err in errors)
+                {
+                    Console.WriteLine(err.Message);
+                }
 
-            tree.Accept(checker);
-            if (false == checker.containsOnlySelects)
-            {
-                MessageBox.Show("The code contains something other than SELECT statements!");
-            }
-            else
-            {
-                MessageBox.Show("Looks ok!");
-            }
+                MyVisitor checker = new MyVisitor();
 
-            rdr.Dispose();
+                tree.Accept(checker);
+                if (checker.containsOnlySelects)
+                {
+                    MessageBox.Show("Looks ok!");
+                }
+                else
+                {
+                    MessageBox.Show("The code contains something other than SELECT statements!");
+                }
+            }
         }
     }
 
@@ -86,7 +78,7 @@ namespace TSQLFormatter
 
         public override void Visit(TSqlStatement node)
         {
-            if ((node as SelectStatement) == null)
+            if ((node as SelectStatement) is null)
             {
                 containsOnlySelects = false;
             }

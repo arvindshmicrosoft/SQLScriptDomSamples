@@ -1,8 +1,7 @@
 ﻿//------------------------------------------------------------------------------
-//<copyright company="Microsoft">
 //    The MIT License (MIT)
 //    
-//    Copyright (c) 2017 Microsoft
+//    Copyright (c) 2020 Arvind Shyamsundar
 //    
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -28,12 +27,9 @@
 //    be liable for any damages whatsoever (including, without limitation, damages for loss of business profits,
 //    business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability
 //    to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
-//</copyright>
 //------------------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace TSQLFormatter
