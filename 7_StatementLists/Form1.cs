@@ -57,11 +57,85 @@ namespace TSQLFormatter
                     Console.WriteLine(err.Message);
                 }
 
+                var checker = new MyVisitor();
+
+                tree.Accept(checker);
+
                 var scrGen = new Sql150ScriptGenerator();
                 string formattedSQL = null;
                 scrGen.GenerateScript(tree, out formattedSQL);
 
-                textBox2.Text = formattedSQL;
+                MessageBox.Show(formattedSQL);
+            }
+        }
+    }
+
+    class MyVisitor : TSqlFragmentVisitor
+    {
+        internal bool containsOnlySelects = true;
+
+        public override void Visit(TSqlFragment node)
+        {
+            // We use this to check for, and remove any SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED statements
+            // Also, as a proof of concept, the visitor also introduces a SET NOCOUNT ON statement as the first statement
+            // We do this for TSqlBatch, TSqlProcedure as samples.
+            // Other fragment types are potentially extensions of this sample.
+            CheckandRewrite(node);
+            base.Visit(node);
+        }
+
+        private void CheckandRewrite(TSqlFragment node)
+        {
+            var finalList = new List<TSqlStatement>();
+            var toRemoveList = new List<TSqlStatement>();
+
+            IList<TSqlStatement> stmtList = null;
+            if (node is TSqlBatch)
+            {
+                stmtList = (node as TSqlBatch).Statements;
+            }
+
+            if (node is ProcedureStatementBodyBase)
+            {
+                stmtList = (node as CreateProcedureStatement).StatementList.Statements;
+            }
+
+            if (stmtList is null)
+            {
+                return;
+            }
+
+            foreach (TSqlStatement stmt in stmtList)
+            {
+                if (stmt is SetTransactionIsolationLevelStatement)
+                {
+                    if (IsolationLevel.ReadUncommitted ==
+                        (stmt as SetTransactionIsolationLevelStatement).Level)
+                    {
+                        toRemoveList.Add(stmt);
+                    }
+                }
+            }
+
+            // Add a SET NOCOUNT ON statement
+            finalList.Add(new PredicateSetStatement()
+            {
+                Options = SetOptions.NoCount,
+                IsOn = true
+            });
+
+            // Remove any unwanted (SET TRANSACTION ISOLATION READ UNCOMMITTED) statements
+            foreach (var stmtToRemove in toRemoveList)
+            {
+                stmtList.Remove(stmtToRemove);
+            }
+
+            finalList.AddRange(stmtList);
+
+            stmtList.Clear();
+            foreach(var stmt in finalList)
+            {
+                stmtList.Add(stmt);
             }
         }
     }
