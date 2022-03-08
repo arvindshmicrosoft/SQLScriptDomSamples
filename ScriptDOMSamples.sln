@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_BasicUsage", "1_BasicUsage\1_BasicUsage.csproj", "{88301D6F-7C0B-4950-891D-999F991133A6}"
 EndProject
@@ -16,6 +16,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_TSQLVisualizer", "6_TSQLVisualizer\6_TSQLVisualizer.csproj", "{51E8719C-0ACA-4C79-AE31-7DE0DC0D5BE7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_StatementLists", "7_StatementLists\7_StatementLists.csproj", "{82E6E27C-2B4D-4D83-A797-18EBF1F721F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A19B07A2-A103-4BC5-9705-F8C01FCE3C5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{698BF626-CEC2-4FAF-80A3-40D515134A54}"
+	ProjectSection(SolutionItems) = preProject
+		build.yml = build.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +91,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{698BF626-CEC2-4FAF-80A3-40D515134A54} = {A19B07A2-A103-4BC5-9705-F8C01FCE3C5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {939348C3-B244-4160-B9C0-66DFE32ED9B2}
