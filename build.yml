@@ -1,0 +1,17 @@
+name: Build ScriptDomSamples
+on: pull_request
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2.3.5
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.3
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+    - name: Restore NuGet Packages
+      run: nuget restore ScriptDOMSamples.sln
+    - name: Build ScriptDOMSamples
+      run: msbuild ScriptDOMSamples.sln /p:Configuration=Release
