@@ -21,8 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A19B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{698BF626-CEC2-4FAF-80A3-40D515134A54}"
 	ProjectSection(SolutionItems) = preProject
-		build.yml = build.yml
+		.github\workflows\build.yml = .github\workflows\build.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_TSQLTextNormalizer", "8_TSQLTextNormalizer\8_TSQLTextNormalizer.csproj", "{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +90,14 @@ Global
 		{82E6E27C-2B4D-4D83-A797-18EBF1F721F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82E6E27C-2B4D-4D83-A797-18EBF1F721F2}.Release|x86.ActiveCfg = Release|x86
 		{82E6E27C-2B4D-4D83-A797-18EBF1F721F2}.Release|x86.Build.0 = Release|x86
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Debug|x86.Build.0 = Debug|Any CPU
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Release|x86.ActiveCfg = Release|Any CPU
+		{D131443D-20C2-40F2-9D8B-6DA0EBE763B7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
