@@ -60,7 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SqlServer.TransactSql.ScriptDom, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.DacFx.160.5400.1\lib\net462\Microsoft.SqlServer.TransactSql.ScriptDom.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.DacFx.160.6161.0\lib\net462\Microsoft.SqlServer.TransactSql.ScriptDom.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
