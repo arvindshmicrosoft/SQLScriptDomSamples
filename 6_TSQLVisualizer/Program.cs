@@ -38,17 +38,17 @@ using Microsoft.SqlServer.TransactSql.ScriptDom;
 using System.IO;
 using System.Reflection;
 
-namespace GenericWalker
+namespace SQLScriptDomSamples
 {
     class Program
     {
         static StringBuilder result = new StringBuilder();
         static void Main(string[] args)
         {
-            var rdr = new StreamReader(@"c:\ScriptDom\sampleproc.sql");
+            var rdr = new StreamReader(@"..\..\..\sampleproc.sql");
 
             IList<ParseError> errors = null;
-            var parser = new TSql150Parser(true, SqlEngineType.All);
+            var parser = new TSql160Parser(true, SqlEngineType.All);
             var tree = parser.Parse(rdr, out errors);
 
             foreach (ParseError err in errors)

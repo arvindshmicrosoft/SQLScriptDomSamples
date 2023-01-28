@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TSQLFormatter.Properties {
+namespace SQLScriptDomSamples.Properties {
     using System;
     
     

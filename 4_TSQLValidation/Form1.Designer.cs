@@ -1,4 +1,4 @@
-﻿namespace TSQLFormatter
+﻿namespace SQLScriptDomSamples
 {
     partial class Form1
     {

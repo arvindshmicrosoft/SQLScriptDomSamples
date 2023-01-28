@@ -28,7 +28,7 @@
 //    business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability
 //    to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
 //------------------------------------------------------------------------------
-namespace TSQLTextNormalizer
+namespace SQLScriptDomSamples
 {
     using System;
     using System.Collections.Generic;
@@ -101,7 +101,7 @@ namespace TSQLTextNormalizer
                 case 150:
                     {
                         scrgen = new Sql150ScriptGenerator();
-                        parser = new TSql150Parser(true);
+                        parser = new TSql160Parser(true);
                         break;
                     }
                 case 160:

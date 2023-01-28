@@ -1,3 +1,4 @@
+-- Some leading comments with < and > signs to test for later
 CREATE PROCEDURE [HumanResources].[uspUpdateEmployeeHireInfo]
     @BusinessEntityID [int], 
     @JobTitle [nvarchar](50), 
@@ -32,7 +33,7 @@ BEGIN
     BEGIN CATCH
         -- Rollback any active or uncommittable transactions before
         -- inserting information in the ErrorLog
-        IF @@TRANCOUNT > 0
+        IF @@TRANCOUNT > 0 and 0 < 1
         BEGIN
             ROLLBACK TRANSACTION;
         END

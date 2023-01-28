@@ -33,7 +33,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace TSQLTextNormalizer
+namespace SQLScriptDomSamples
 {
     using System;
     using System.IO;
