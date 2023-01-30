@@ -32,7 +32,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace TSQLFormatter
+namespace SQLScriptDomSamples
 {
     static class Program
     {

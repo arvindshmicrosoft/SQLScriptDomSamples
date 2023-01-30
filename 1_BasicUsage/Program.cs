@@ -34,18 +34,18 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace BasicUsage
+namespace SQLScriptDomSamples
 {
     class Program
     {
         static void Main(string[] args)
         {
-            using (var rdr = new StreamReader(@"c:\ScriptDom\sampleproc.sql"))
+            using (var rdr = new StreamReader(@"..\..\..\sampleproc.sql"))
             {
                 IList<ParseError> errors = null;
 
                 // pass the reader to the scriptdom
-                var parser = new TSql150Parser(true, SqlEngineType.All);
+                var parser = new TSql160Parser(true, SqlEngineType.All);
                 var tree = parser.Parse(rdr, out errors);
 
                 foreach (ParseError err in errors)

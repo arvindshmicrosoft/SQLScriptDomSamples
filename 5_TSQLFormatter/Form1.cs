@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
-namespace TSQLFormatter
+namespace SQLScriptDomSamples
 {
     public partial class Form1 : Form
     {
@@ -49,7 +49,7 @@ namespace TSQLFormatter
             using (var rdr = new StringReader(textBox1.Text))
             {
                 IList<ParseError> errors = null;
-                var parser = new TSql150Parser(true, SqlEngineType.All);
+                var parser = new TSql160Parser(true, SqlEngineType.All);
                 var tree = parser.Parse(rdr, out errors);
 
                 foreach (ParseError err in errors)
