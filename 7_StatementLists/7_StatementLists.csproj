@@ -94,7 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SqlServer.TransactSql.ScriptDom">
-      <HintPath>..\packages\Microsoft.SqlServer.DacFx.161.6374.0\lib\net462\Microsoft.SqlServer.TransactSql.ScriptDom.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.TransactSql.ScriptDom.161.8812.0\lib\net462\Microsoft.SqlServer.TransactSql.ScriptDom.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
